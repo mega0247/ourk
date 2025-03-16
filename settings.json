@@ -1,15 +1,18 @@
 {
     "app_name": "URL Redirector",
-    "redirect_url": "http://google.com", 
+    "redirect_url": "https://gff.kroger.store/{generated_code}",
     "log_level": "info", 
     "debug": true,
     "api_keys": {
-      "google_api_key": "your_google_api_key_here",
-      "other_api_key": "your_other_api_key_here"
+        "google_api_key": "your_google_api_key_here",
+        "other_api_key": "your_other_api_key_here"
     },
     "server": {
-      "host": "127.0.0.1",
-      "port": 5000
-    }
-  }
-  
+        "host": "0.0.0.0",
+        "port": 5000
+    },
+    "domain": "https://gff.kroger.store",
+    "enable_auto_generate": true,
+    "generate_url_count": 10,
+    "generated_urls": []
+}
