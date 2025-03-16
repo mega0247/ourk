@@ -1,0 +1,15 @@
+{
+    "app_name": "URL Redirector",
+    "redirect_url": "http://google.com", 
+    "log_level": "info", 
+    "debug": true,
+    "api_keys": {
+      "google_api_key": "your_google_api_key_here",
+      "other_api_key": "your_other_api_key_here"
+    },
+    "server": {
+      "host": "127.0.0.1",
+      "port": 5000
+    }
+  }
+  
