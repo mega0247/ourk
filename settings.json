@@ -1,6 +1,6 @@
 {
     "app_name": "URL Redirector",
-    "redirect_url": "https://gff.kroger.store/{generated_code}",
+    "redirect_url": "https://earthbluerelocation.com/{generated_code}",
     "log_level": "info", 
     "debug": true,
     "api_keys": {
@@ -11,7 +11,7 @@
         "host": "0.0.0.0",
         "port": 5000
     },
-    "domain": "https://gff.kroger.store",
+    "domain": "https://earthbluerelocation.com/",
     "enable_auto_generate": true,
     "generate_url_count": 10,
     "generated_urls": []
