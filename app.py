@@ -5,7 +5,7 @@ from flask import Flask, redirect, jsonify
 app = Flask(__name__)
 
 # Path to the JSON file inside the 'redirect' folder
-REDIRECT_FILE = os.path.join(os.path.dirname(__file__), '..', 'redirect', 'redirect.json')
+REDIRECT_FILE = os.path.join(os.path.dirname(__file__), 'redirect', 'redirect.json')
 
 # Home Route
 @app.route('/')
@@ -32,4 +32,5 @@ def home():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Allow the app to listen on all network interfaces by binding to 0.0.0.0
+    app.run(debug=True, host='0.0.0.0', port=5000)
