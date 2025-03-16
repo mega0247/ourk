@@ -5,11 +5,7 @@ from flask import Flask, redirect, jsonify
 app = Flask(__name__)
 
 # Path to the JSON file inside the 'redirect' folder
-<<<<<<< HEAD
 REDIRECT_FILE = os.path.join(os.path.dirname(__file__), '..', 'redirect', 'redirect.json')
-=======
-REDIRECT_FILE = 'redirect/redirect.json'
->>>>>>> fb0dc06bca0f3ed2fb21e51105d050f225cd3374
 
 # Home Route
 @app.route('/')
