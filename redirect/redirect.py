@@ -1,25 +1,14 @@
 from flask import Flask, redirect
+import json
 
 app = Flask(__name__)
 
-# Redirect Route
-@app.route('/<short_code>', methods=['GET'])
-def redirect_url(short_code):
-    # Here we map short codes to actual URLs
-    url_mapping = {
-        "abc123": "https://google.com",  # Update to google.com
-        # Add more mappings here as needed
-    }
+# Load URL from a JSON file or define it directly
+@app.route('/')
+def home():
+    with open('redirect.json', 'r') as f:
+        data = json.load(f)
+    return redirect(data['original_url'], code=302)
 
-    # Get the original URL based on the short code
-    original_url = url_mapping.get(short_code)
-
-    if original_url:
-        # If a mapping exists, redirect to the original URL
-        return redirect(original_url)
-    else:
-        # If no mapping exists, return a 404 error
-        return "Short URL not found!", 404
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
