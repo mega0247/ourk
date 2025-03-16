@@ -1,17 +1,17 @@
-from flask import Flask, redirect, jsonify
-import json
 import os
+import json
+from flask import Flask, redirect, jsonify
 
 app = Flask(__name__)
 
-# Path to the JSON file
-REDIRECT_FILE = 'redirect.json'
+# Path to the JSON file inside the 'redirect' folder
+REDIRECT_FILE = 'redirect/redirect.json'
 
 # Home Route
 @app.route('/')
 def home():
     try:
-        # Check if the redirect.json file exists
+        # Check if the redirect.json file exists in the redirect folder
         if not os.path.exists(REDIRECT_FILE):
             return jsonify({"error": f"{REDIRECT_FILE} not found."}), 404
 
